@@ -7,74 +7,74 @@
 //
 #import "Kiwi.h"
 #import "ObserverInTest.h"
-#import "ORObservableDispatcher.h"
+#import "Emitter.h"
 
 SPEC_BEGIN(DGObservableSpec)
-    describe(@"ORObservable", ^{
+    describe(@"Emitter", ^{
 
-        __block ORObservableDispatcher *observable = nil;
+        __block Emitter *emitter = nil;
         __block ObserverInTest *observer1 = nil;
         __block ObserverInTest *observer2 = nil;
 
         beforeEach(^{
-            observable = [ORObservableDispatcher new];
+            emitter = [Emitter new];
 
             observer1 = [ObserverInTest new];
-            [observable observer:observer1 observerBlock:^{
+            [emitter subscribe:observer1 on:^{
                 observer1.successCounter += 1;
             }];
-            [observable observer:observer1 observerErrorBlock:^(NSError *error){
+            [emitter on:observer1 onError:^(NSError *error) {
                 observer1.errorCounter += 1;
             }];
 
             observer2 = [ObserverInTest new];
-            [observable observer:observer2 observerBlock:^{
+            [emitter subscribe:observer2 on:^{
                 observer2.successCounter += 1;
             }];
-            [observable observer:observer2 observerErrorBlock:^(NSError *error){
+            [emitter on:observer2 onError:^(NSError *error) {
                 observer2.errorCounter += 1;
             }];
         });
 
         it(@"updates all registered observersSuccess", ^{
-            [observable update];
+            [emitter emit];
             [[expectFutureValue(theValue(observer1.successCounter)) shouldEventually] equal:theValue(1)];
             [[expectFutureValue(theValue(observer2.successCounter)) shouldEventually] equal:theValue(1)];
         });
 
         it(@"updates only registered observersSuccess", ^{
-            [observable update];
+            [emitter emit];
             [[expectFutureValue(theValue(observer1.successCounter)) shouldEventually] equal:theValue(1)];
             [[expectFutureValue(theValue(observer2.successCounter)) shouldEventually] equal:theValue(1)];
 
-            [observable unobserve:observer1];
-            [observable update];
+            [emitter unsubscribe:observer1];
+            [emitter emit];
             [[expectFutureValue(theValue(observer1.successCounter)) shouldEventually] equal:theValue(1)];
             [[expectFutureValue(theValue(observer2.successCounter)) shouldEventually] equal:theValue(2)];
         });
 
         it(@"handles wrong unobserve actions", ^{
-            [observable unobserve:nil];
-            [observable unobserve:[ObserverInTest new]];
-            [observable update];
+            [emitter unsubscribe:nil];
+            [emitter unsubscribe:[ObserverInTest new]];
+            [emitter emit];
             [[expectFutureValue(theValue(observer1.successCounter)) shouldEventually] equal:theValue(1)];
             [[expectFutureValue(theValue(observer2.successCounter)) shouldEventually] equal:theValue(1)];
         });
 
 
         it(@"error updates error registered observersSuccess", ^{
-            [observable updateError:nil];
+            [emitter emitError:nil];
             [[expectFutureValue(theValue(observer1.errorCounter)) shouldEventually] equal:theValue(1)];
             [[expectFutureValue(theValue(observer2.errorCounter)) shouldEventually] equal:theValue(1)];
         });
 
         it(@"updates for error only registered observersSuccess", ^{
-            [observable updateError:nil];
+            [emitter emitError:nil];
             [[expectFutureValue(theValue(observer1.errorCounter)) shouldEventually] equal:theValue(1)];
             [[expectFutureValue(theValue(observer2.errorCounter)) shouldEventually] equal:theValue(1)];
 
-            [observable unobserve:observer1];
-            [observable updateError:nil];
+            [emitter unsubscribe:observer1];
+            [emitter emitError:nil];
             [[expectFutureValue(theValue(observer1.errorCounter)) shouldEventually] equal:theValue(1)];
             [[expectFutureValue(theValue(observer2.errorCounter)) shouldEventually] equal:theValue(2)];
         });
