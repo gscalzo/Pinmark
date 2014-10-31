@@ -4,6 +4,7 @@
 //
 
 #import "ContainerViewModel.h"
+#import "Emitter.h"
 
 
 @implementation ContainerViewModel
@@ -18,6 +19,12 @@
 
 + (instancetype)modelWithEmitter:(id)emitter {
     return [[self alloc] initWithEmitter:emitter];
+}
+
+
+- (void)swapButtonPressed{
+    self.childVCIndexToShow = (self.childVCIndexToShow + 1)%2;
+    [self.emitter emit];
 }
 
 @end

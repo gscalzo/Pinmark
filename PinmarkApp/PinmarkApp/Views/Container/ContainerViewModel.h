@@ -9,8 +9,13 @@
 @interface ContainerViewModel : NSObject
 @property(nonatomic, strong) id emitter;
 
-- (instancetype)initWithEmitter:(id)emitter;
 
+@property(nonatomic, assign) NSInteger childVCIndexToShow;
+
+
+- (instancetype)initWithEmitter:(id)emitter;
 + (instancetype)modelWithEmitter:(id)emitter;
+
+- (void)swapButtonPressed;
 
 @end
