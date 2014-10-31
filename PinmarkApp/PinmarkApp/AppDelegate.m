@@ -11,6 +11,7 @@
 #import "ContainerViewController.h"
 #import "MapViewController.h"
 #import "PinListViewController.h"
+#import "ContainerViewModel.h"
 
 
 @interface AppDelegate ()
@@ -36,7 +37,7 @@
 - (UIViewController *)_configuredRootViewController {
 
     NSArray *childViewControllers = [self _configuredChildViewControllers];
-    ContainerViewController *rootViewController = [[ContainerViewController alloc] initWithViewControllers:childViewControllers];
+    ContainerViewController *rootViewController = [[ContainerViewController alloc] initWithViewControllers:childViewControllers viewModel:[ContainerViewModel new]];
 
     return rootViewController;
 }

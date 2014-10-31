@@ -6,7 +6,7 @@
 //
 
 @import UIKit;
-@import Foundation;
+@import Foundation;@class ContainerViewModel;
 
 /** A very simple container view controller for demonstrating containment in an environment different from UINavigationController and UITabBarController.
 @discussion This class implements support for non-interactive custom view controller transitions.
@@ -23,6 +23,6 @@
 /** Designated initializer.
 @note The view controllers array cannot be changed after initialization.
 */
-- (instancetype)initWithViewControllers:(NSArray *)viewControllers;
+- (instancetype)initWithViewControllers:(NSArray *)viewControllers viewModel:(ContainerViewModel *)vm;
 
 @end

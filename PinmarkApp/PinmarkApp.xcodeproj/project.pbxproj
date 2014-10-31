@@ -17,12 +17,12 @@
 		4EE97605A52964B0D797E5BD /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97A4499404030EF92782A /* ContainerViewController.m */; };
 		4EE977F44654289CAAF23AA4 /* ObserverInTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9780051C3D5C3EA6196D9 /* ObserverInTest.m */; };
 		4EE977FBA06F49F3D033466F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9764E52722518EFCC0152 /* main.m */; };
-		4EE9786C693D2CE9033586DC /* ContainerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9777B66C02E0A6151D0E9 /* ContainerViewModel.m */; };
 		4EE97ADB097EDC9647A0882E /* ContainerViewModelSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97804A7158230E5641536 /* ContainerViewModelSpecs.m */; };
 		4EE97CC21F3B3259A9AC38EC /* DGObservableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97284EE607D307E8C91B0 /* DGObservableSpec.m */; };
 		4EE97F3EBE7036A3CDDF9C24 /* KiwiSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97657A56593F2F846119F /* KiwiSpecs.m */; };
 		575E63154615DB987F4492BA /* libPods-PinmarkApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94DD0F22DEE3F0C4A3F7A9 /* libPods-PinmarkApp.a */; };
 		778AF67E9025C8F645899B00 /* libPods-PinmarkAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8229C8ECEE98E2649F143D25 /* libPods-PinmarkAppTests.a */; };
+		EEA129841A04427400FA5D39 /* ContainerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9777B66C02E0A6151D0E9 /* ContainerViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +50,7 @@
 		4EE9764E52722518EFCC0152 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EE97657A56593F2F846119F /* KiwiSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiwiSpecs.m; sourceTree = "<group>"; };
 		4EE976AD479312BE3DC38B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4EE9771B6DE6C7468F48B2FA /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		4EE9777B66C02E0A6151D0E9 /* ContainerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewModel.m; sourceTree = "<group>"; };
 		4EE9780051C3D5C3EA6196D9 /* ObserverInTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObserverInTest.m; sourceTree = "<group>"; };
 		4EE97804A7158230E5641536 /* ContainerViewModelSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewModelSpecs.m; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 			children = (
 				4EE97634192462FFB86026C8 /* Emitter.m */,
 				4EE97BA7062982BD9C58DD9B /* Emitter.h */,
+				4EE9771B6DE6C7468F48B2FA /* Common.h */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -397,6 +399,7 @@
 				4EE97603E49319790F90BA85 /* AppDelegate.m in Sources */,
 				4EE97605A52964B0D797E5BD /* ContainerViewController.m in Sources */,
 				4EE972D287BAD9BDB2886970 /* MapViewController.m in Sources */,
+				EEA129841A04427400FA5D39 /* ContainerViewModel.m in Sources */,
 				4EE97378F3E0298EB72ED0D1 /* PinListViewController.m in Sources */,
 				4EE97044F0A47FB114D379C0 /* Emitter.m in Sources */,
 			);
@@ -411,7 +414,6 @@
 				4EE97CC21F3B3259A9AC38EC /* DGObservableSpec.m in Sources */,
 				4EE977F44654289CAAF23AA4 /* ObserverInTest.m in Sources */,
 				4EE97ADB097EDC9647A0882E /* ContainerViewModelSpecs.m in Sources */,
-				4EE9786C693D2CE9033586DC /* ContainerViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
