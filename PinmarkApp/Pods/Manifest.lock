@@ -1,8 +1,10 @@
 PODS:
   - Kiwi (2.3.0)
+  - ObjectiveSugar (1.1.0)
 
 DEPENDENCIES:
   - Kiwi (from `https://github.com/kiwi-bdd/Kiwi.git`)
+  - ObjectiveSugar (~> 1.1.0)
 
 EXTERNAL SOURCES:
   Kiwi:
@@ -10,5 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: 9bf937c3c7be7e8121c3db7c2d289893722d6f16
+  ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
 
 COCOAPODS: 0.34.2

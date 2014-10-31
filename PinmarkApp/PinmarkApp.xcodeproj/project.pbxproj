@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EE97044F0A47FB114D379C0 /* ORObservableDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97634192462FFB86026C8 /* ORObservableDispatcher.m */; };
 		4EE97098187A0EEA9232CE24 /* PinmarkAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9744E43793C05B5886D86 /* PinmarkAppTests.m */; };
+		4EE972D287BAD9BDB2886970 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE972FE402AB212E144B45E /* MapViewController.m */; };
 		4EE972F7A7C7A2FE6AF20265 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE97175C3CBEE7C53D94273 /* LaunchScreen.xib */; };
+		4EE97378F3E0298EB72ED0D1 /* PinListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE970E1F33A51093125830D /* PinListViewController.m */; };
 		4EE975A3800EF748E0FF5C63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EE9794D36EB9246BCE5CEAE /* Images.xcassets */; };
 		4EE97603E49319790F90BA85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97E1ED56CBF454B06DDAF /* AppDelegate.m */; };
-		4EE976548851ABAA3AF8FDDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE971BA2E976E04EEB78C6C /* ViewController.m */; };
-		4EE976BF1BDBA83B14840FE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE97BC5FDE49C2E001231F5 /* Main.storyboard */; };
+		4EE97605A52964B0D797E5BD /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97A4499404030EF92782A /* ContainerViewController.m */; };
+		4EE977F44654289CAAF23AA4 /* ObserverInTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9780051C3D5C3EA6196D9 /* ObserverInTest.m */; };
 		4EE977FBA06F49F3D033466F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9764E52722518EFCC0152 /* main.m */; };
+		4EE97CC21F3B3259A9AC38EC /* DGObservableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97284EE607D307E8C91B0 /* DGObservableSpec.m */; };
+		4EE97E48639892F6F63DE88D /* ContainerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE975E3442C50720567A299 /* ContainerViewModel.m */; };
 		4EE97F3EBE7036A3CDDF9C24 /* KiwiSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97657A56593F2F846119F /* KiwiSpecs.m */; };
+		575E63154615DB987F4492BA /* libPods-PinmarkApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94DD0F22DEE3F0C4A3F7A9 /* libPods-PinmarkApp.a */; };
 		778AF67E9025C8F645899B00 /* libPods-PinmarkAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8229C8ECEE98E2649F143D25 /* libPods-PinmarkAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -29,23 +35,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E94DD0F22DEE3F0C4A3F7A9 /* libPods-PinmarkApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PinmarkApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC8EDC8217ABD366DBDD4EF /* Pods-PinmarkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinmarkAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinmarkAppTests/Pods-PinmarkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4DFB42DA9266A159E50022A4 /* Pods-PinmarkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinmarkApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinmarkApp/Pods-PinmarkApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4EE9703EF68DC46EE8A62BCE /* PinmarkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinmarkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EE971BA2E976E04EEB78C6C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4EE970E1F33A51093125830D /* PinListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinListViewController.m; sourceTree = "<group>"; };
+		4EE97284EE607D307E8C91B0 /* DGObservableSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGObservableSpec.m; sourceTree = "<group>"; };
+		4EE972BFA61BD1FF4B460AA1 /* ObserverInTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObserverInTest.h; sourceTree = "<group>"; };
+		4EE972FE402AB212E144B45E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		4EE9744E43793C05B5886D86 /* PinmarkAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinmarkAppTests.m; sourceTree = "<group>"; };
-		4EE974E8A677EFB431A1D0DF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4EE9751554D2D379BB9E2637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4EE975E3442C50720567A299 /* ContainerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewModel.m; sourceTree = "<group>"; };
+		4EE97634192462FFB86026C8 /* ORObservableDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORObservableDispatcher.m; sourceTree = "<group>"; };
 		4EE9764E52722518EFCC0152 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EE97657A56593F2F846119F /* KiwiSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiwiSpecs.m; sourceTree = "<group>"; };
 		4EE976AD479312BE3DC38B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4EE9780051C3D5C3EA6196D9 /* ObserverInTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObserverInTest.m; sourceTree = "<group>"; };
 		4EE9794D36EB9246BCE5CEAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4EE97A2547FE639241F1B0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		4EE97A4499404030EF92782A /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		4EE97AE533EC572F1F1FAB65 /* PinListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinListViewController.h; sourceTree = "<group>"; };
 		4EE97B402CCEC5FE886F13FC /* PinmarkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinmarkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EE97BA7062982BD9C58DD9B /* ORObservableDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORObservableDispatcher.h; sourceTree = "<group>"; };
+		4EE97C58718841FCBF5611AB /* ContainerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewModel.h; sourceTree = "<group>"; };
 		4EE97C70950B9F0DE16E9AE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4EE97CDAFB44C6241E6A354F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		4EE97DC588BD8821EB99A227 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		4EE97E1ED56CBF454B06DDAF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4EE97F117A11F094B3242A5D /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
 		8229C8ECEE98E2649F143D25 /* libPods-PinmarkAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PinmarkAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C96C72398AF2C349088D66 /* Pods-PinmarkAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinmarkAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinmarkAppTests/Pods-PinmarkAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		DE071ADC1740A5DEB2A57494 /* Pods-PinmarkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinmarkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinmarkApp/Pods-PinmarkApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				575E63154615DB987F4492BA /* libPods-PinmarkApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +95,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4EE971F9443AAFE70BCC2528 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				4EE97A4499404030EF92782A /* ContainerViewController.m */,
+				4EE97F117A11F094B3242A5D /* ContainerViewController.h */,
+				4EE975E3442C50720567A299 /* ContainerViewModel.m */,
+				4EE97C58718841FCBF5611AB /* ContainerViewModel.h */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		4EE97320FE8A316673427732 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				4EE97634192462FFB86026C8 /* ORObservableDispatcher.m */,
+				4EE97BA7062982BD9C58DD9B /* ORObservableDispatcher.h */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		4EE9735CBD10B5CF5B2D1D9B /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				4EE97DC588BD8821EB99A227 /* MapViewController.h */,
+				4EE972FE402AB212E144B45E /* MapViewController.m */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
 		4EE973CE6CAE850F946E58F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,8 +139,18 @@
 				4EE97122FEFC91B8BEE724AB /* Supporting Files */,
 				4EE9744E43793C05B5886D86 /* PinmarkAppTests.m */,
 				4EE97657A56593F2F846119F /* KiwiSpecs.m */,
+				4EE9788A6B0A9E2D1A25BA58 /* Emitter */,
 			);
 			path = PinmarkAppTests;
+			sourceTree = "<group>";
+		};
+		4EE97403CC47DE90B42D9AB8 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				4EE972BFA61BD1FF4B460AA1 /* ObserverInTest.h */,
+				4EE9780051C3D5C3EA6196D9 /* ObserverInTest.m */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		4EE977922C0356F5B9B67743 /* PinmarkApp */ = {
@@ -102,9 +161,8 @@
 				4EE97175C3CBEE7C53D94273 /* LaunchScreen.xib */,
 				4EE97C70950B9F0DE16E9AE0 /* AppDelegate.h */,
 				4EE97E1ED56CBF454B06DDAF /* AppDelegate.m */,
-				4EE97BC5FDE49C2E001231F5 /* Main.storyboard */,
-				4EE974E8A677EFB431A1D0DF /* ViewController.h */,
-				4EE971BA2E976E04EEB78C6C /* ViewController.m */,
+				4EE97F0EBDBCAE03DB78AE1C /* Views */,
+				4EE97320FE8A316673427732 /* Lib */,
 			);
 			path = PinmarkApp;
 			sourceTree = "<group>";
@@ -120,6 +178,24 @@
 			);
 			sourceTree = "<group>";
 		};
+		4EE9788A6B0A9E2D1A25BA58 /* Emitter */ = {
+			isa = PBXGroup;
+			children = (
+				4EE97284EE607D307E8C91B0 /* DGObservableSpec.m */,
+				4EE97403CC47DE90B42D9AB8 /* Stubs */,
+			);
+			path = Emitter;
+			sourceTree = "<group>";
+		};
+		4EE9797CDB5A588BDDF95A10 /* PinListView */ = {
+			isa = PBXGroup;
+			children = (
+				4EE97AE533EC572F1F1FAB65 /* PinListViewController.h */,
+				4EE970E1F33A51093125830D /* PinListViewController.m */,
+			);
+			path = PinListView;
+			sourceTree = "<group>";
+		};
 		4EE97E1EA36980952CC82074 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,10 +205,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4EE97F0EBDBCAE03DB78AE1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EE971F9443AAFE70BCC2528 /* Container */,
+				4EE9735CBD10B5CF5B2D1D9B /* MapView */,
+				4EE9797CDB5A588BDDF95A10 /* PinListView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9C6CD990726EA2B689ED17C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8229C8ECEE98E2649F143D25 /* libPods-PinmarkAppTests.a */,
+				1E94DD0F22DEE3F0C4A3F7A9 /* libPods-PinmarkApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,6 +229,8 @@
 			children = (
 				4DC8EDC8217ABD366DBDD4EF /* Pods-PinmarkAppTests.debug.xcconfig */,
 				B7C96C72398AF2C349088D66 /* Pods-PinmarkAppTests.release.xcconfig */,
+				4DFB42DA9266A159E50022A4 /* Pods-PinmarkApp.debug.xcconfig */,
+				DE071ADC1740A5DEB2A57494 /* Pods-PinmarkApp.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -173,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EE974704DCA91265D09FAD0 /* Build configuration list for PBXNativeTarget "PinmarkApp" */;
 			buildPhases = (
+				199E6DEF90463481B96CFABA /* Check Pods Manifest.lock */,
 				4EE9711B2972055C71B8BB1D /* Sources */,
 				4EE97012BA1EDEA5545795DE /* Frameworks */,
 				4EE97C5768DA6348052B0B99 /* Resources */,
+				49CE73048178A41E4B71D6AE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,7 +317,6 @@
 			files = (
 				4EE975A3800EF748E0FF5C63 /* Images.xcassets in Resources */,
 				4EE972F7A7C7A2FE6AF20265 /* LaunchScreen.xib in Resources */,
-				4EE976BF1BDBA83B14840FE5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +353,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		199E6DEF90463481B96CFABA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		49CE73048178A41E4B71D6AE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinmarkApp/Pods-PinmarkApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -272,7 +392,11 @@
 			files = (
 				4EE977FBA06F49F3D033466F /* main.m in Sources */,
 				4EE97603E49319790F90BA85 /* AppDelegate.m in Sources */,
-				4EE976548851ABAA3AF8FDDF /* ViewController.m in Sources */,
+				4EE97605A52964B0D797E5BD /* ContainerViewController.m in Sources */,
+				4EE97E48639892F6F63DE88D /* ContainerViewModel.m in Sources */,
+				4EE972D287BAD9BDB2886970 /* MapViewController.m in Sources */,
+				4EE97378F3E0298EB72ED0D1 /* PinListViewController.m in Sources */,
+				4EE97044F0A47FB114D379C0 /* ORObservableDispatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +406,8 @@
 			files = (
 				4EE97098187A0EEA9232CE24 /* PinmarkAppTests.m in Sources */,
 				4EE97F3EBE7036A3CDDF9C24 /* KiwiSpecs.m in Sources */,
+				4EE97CC21F3B3259A9AC38EC /* DGObservableSpec.m in Sources */,
+				4EE977F44654289CAAF23AA4 /* ObserverInTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +428,6 @@
 				4EE976AD479312BE3DC38B3A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		4EE97BC5FDE49C2E001231F5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4EE9751554D2D379BB9E2637 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -363,12 +481,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};
 		4EE97ADD7CCCB4427E0C2CDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DFB42DA9266A159E50022A4 /* Pods-PinmarkApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PinmarkApp/Info.plist;
@@ -390,12 +509,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
 		4EE97DAD295C12C2AFDEDCBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE071ADC1740A5DEB2A57494 /* Pods-PinmarkApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PinmarkApp/Info.plist;
