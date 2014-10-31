@@ -6,7 +6,18 @@
 #import "ContainerViewModel.h"
 
 
-@implementation ContainerViewModel {
+@implementation ContainerViewModel
+- (instancetype)initWithEmitter:(id)emitter {
+    self = [super init];
+    if (self) {
+        self.emitter = emitter;
+    }
 
+    return self;
 }
+
++ (instancetype)modelWithEmitter:(id)emitter {
+    return [[self alloc] initWithEmitter:emitter];
+}
+
 @end

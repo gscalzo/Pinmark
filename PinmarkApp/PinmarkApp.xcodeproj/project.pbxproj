@@ -17,8 +17,9 @@
 		4EE97605A52964B0D797E5BD /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97A4499404030EF92782A /* ContainerViewController.m */; };
 		4EE977F44654289CAAF23AA4 /* ObserverInTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9780051C3D5C3EA6196D9 /* ObserverInTest.m */; };
 		4EE977FBA06F49F3D033466F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9764E52722518EFCC0152 /* main.m */; };
+		4EE9786C693D2CE9033586DC /* ContainerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9777B66C02E0A6151D0E9 /* ContainerViewModel.m */; };
+		4EE97ADB097EDC9647A0882E /* ContainerViewModelSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97804A7158230E5641536 /* ContainerViewModelSpecs.m */; };
 		4EE97CC21F3B3259A9AC38EC /* DGObservableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97284EE607D307E8C91B0 /* DGObservableSpec.m */; };
-		4EE97E48639892F6F63DE88D /* ContainerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE975E3442C50720567A299 /* ContainerViewModel.m */; };
 		4EE97F3EBE7036A3CDDF9C24 /* KiwiSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97657A56593F2F846119F /* KiwiSpecs.m */; };
 		575E63154615DB987F4492BA /* libPods-PinmarkApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94DD0F22DEE3F0C4A3F7A9 /* libPods-PinmarkApp.a */; };
 		778AF67E9025C8F645899B00 /* libPods-PinmarkAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8229C8ECEE98E2649F143D25 /* libPods-PinmarkAppTests.a */; };
@@ -38,25 +39,26 @@
 		1E94DD0F22DEE3F0C4A3F7A9 /* libPods-PinmarkApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PinmarkApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC8EDC8217ABD366DBDD4EF /* Pods-PinmarkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinmarkAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinmarkAppTests/Pods-PinmarkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4DFB42DA9266A159E50022A4 /* Pods-PinmarkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinmarkApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinmarkApp/Pods-PinmarkApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4EE9701F9CB9C9AE46F37E41 /* ContainerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewModel.h; sourceTree = "<group>"; };
 		4EE9703EF68DC46EE8A62BCE /* PinmarkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinmarkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE970E1F33A51093125830D /* PinListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinListViewController.m; sourceTree = "<group>"; };
 		4EE97284EE607D307E8C91B0 /* DGObservableSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGObservableSpec.m; sourceTree = "<group>"; };
 		4EE972BFA61BD1FF4B460AA1 /* ObserverInTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObserverInTest.h; sourceTree = "<group>"; };
 		4EE972FE402AB212E144B45E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		4EE9744E43793C05B5886D86 /* PinmarkAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinmarkAppTests.m; sourceTree = "<group>"; };
-		4EE975E3442C50720567A299 /* ContainerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewModel.m; sourceTree = "<group>"; };
 		4EE97634192462FFB86026C8 /* Emitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emitter.m; sourceTree = "<group>"; };
 		4EE9764E52722518EFCC0152 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EE97657A56593F2F846119F /* KiwiSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiwiSpecs.m; sourceTree = "<group>"; };
 		4EE976AD479312BE3DC38B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4EE9777B66C02E0A6151D0E9 /* ContainerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewModel.m; sourceTree = "<group>"; };
 		4EE9780051C3D5C3EA6196D9 /* ObserverInTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObserverInTest.m; sourceTree = "<group>"; };
+		4EE97804A7158230E5641536 /* ContainerViewModelSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewModelSpecs.m; sourceTree = "<group>"; };
 		4EE9794D36EB9246BCE5CEAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4EE97A2547FE639241F1B0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		4EE97A4499404030EF92782A /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 		4EE97AE533EC572F1F1FAB65 /* PinListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinListViewController.h; sourceTree = "<group>"; };
 		4EE97B402CCEC5FE886F13FC /* PinmarkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinmarkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE97BA7062982BD9C58DD9B /* Emitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emitter.h; sourceTree = "<group>"; };
-		4EE97C58718841FCBF5611AB /* ContainerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewModel.h; sourceTree = "<group>"; };
 		4EE97C70950B9F0DE16E9AE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4EE97CDAFB44C6241E6A354F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		4EE97DC588BD8821EB99A227 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -100,8 +102,8 @@
 			children = (
 				4EE97A4499404030EF92782A /* ContainerViewController.m */,
 				4EE97F117A11F094B3242A5D /* ContainerViewController.h */,
-				4EE975E3442C50720567A299 /* ContainerViewModel.m */,
-				4EE97C58718841FCBF5611AB /* ContainerViewModel.h */,
+				4EE9777B66C02E0A6151D0E9 /* ContainerViewModel.m */,
+				4EE9701F9CB9C9AE46F37E41 /* ContainerViewModel.h */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -140,6 +142,7 @@
 				4EE9744E43793C05B5886D86 /* PinmarkAppTests.m */,
 				4EE97657A56593F2F846119F /* KiwiSpecs.m */,
 				4EE9788A6B0A9E2D1A25BA58 /* Emitter */,
+				4EE97804A7158230E5641536 /* ContainerViewModelSpecs.m */,
 			);
 			path = PinmarkAppTests;
 			sourceTree = "<group>";
@@ -393,7 +396,6 @@
 				4EE977FBA06F49F3D033466F /* main.m in Sources */,
 				4EE97603E49319790F90BA85 /* AppDelegate.m in Sources */,
 				4EE97605A52964B0D797E5BD /* ContainerViewController.m in Sources */,
-				4EE97E48639892F6F63DE88D /* ContainerViewModel.m in Sources */,
 				4EE972D287BAD9BDB2886970 /* MapViewController.m in Sources */,
 				4EE97378F3E0298EB72ED0D1 /* PinListViewController.m in Sources */,
 				4EE97044F0A47FB114D379C0 /* Emitter.m in Sources */,
@@ -408,6 +410,8 @@
 				4EE97F3EBE7036A3CDDF9C24 /* KiwiSpecs.m in Sources */,
 				4EE97CC21F3B3259A9AC38EC /* DGObservableSpec.m in Sources */,
 				4EE977F44654289CAAF23AA4 /* ObserverInTest.m in Sources */,
+				4EE97ADB097EDC9647A0882E /* ContainerViewModelSpecs.m in Sources */,
+				4EE9786C693D2CE9033586DC /* ContainerViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
