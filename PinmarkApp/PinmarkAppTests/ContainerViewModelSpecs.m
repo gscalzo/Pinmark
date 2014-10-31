@@ -13,19 +13,18 @@
 SPEC_BEGIN(ContainerViewModelSpec)
     describe(@"A ContainerViewMolde", ^{
         it(@"should have an Emitter", ^{
-            ContainerViewModel *vm = [ContainerViewModel modelWithEmitter:[Emitter new]];
+            ContainerViewModel *vm = [ContainerViewModel new];
             [[vm.emitter should] beNonNil];
         });
 
         it(@"should start having childVC at index 0 to show", ^{
-            ContainerViewModel *vm = [ContainerViewModel modelWithEmitter:[Emitter new]];
+            ContainerViewModel *vm = [ContainerViewModel new];
             [theValue(vm.childVCIndexToShow) isEqual:theValue(0)];
         });
 
 
         it(@"should have an action to change the index to 1", ^{
-            Emitter *emitter = [Emitter new];
-            ContainerViewModel *vm = [ContainerViewModel modelWithEmitter:emitter];
+            ContainerViewModel *vm = [ContainerViewModel new];
 
             __block NSInteger futureChildIndex = -1;
             [vm.emitter subscribe:self on:^{
@@ -37,8 +36,7 @@ SPEC_BEGIN(ContainerViewModelSpec)
         });
 
         it(@"should alternate the value of the child to show", ^{
-            Emitter *emitter = [Emitter new];
-            ContainerViewModel *vm = [ContainerViewModel modelWithEmitter:emitter];
+            ContainerViewModel *vm = [ContainerViewModel new];
 
             __block NSInteger futureChildIndex = vm.childVCIndexToShow;
             [vm.emitter subscribe:self on:^{

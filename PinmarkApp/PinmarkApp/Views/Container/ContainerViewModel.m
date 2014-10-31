@@ -8,19 +8,14 @@
 
 
 @implementation ContainerViewModel
-- (instancetype)initWithEmitter:(id)emitter {
-    self = [super init];
-    if (self) {
-        self.emitter = emitter;
-    }
 
+- (id)init
+{
+    if(self = [super init]) {
+        self.emitter = [Emitter new];
+    }
     return self;
 }
-
-+ (instancetype)modelWithEmitter:(id)emitter {
-    return [[self alloc] initWithEmitter:emitter];
-}
-
 
 - (void)swapButtonPressed{
     self.childVCIndexToShow = (self.childVCIndexToShow + 1)%2;

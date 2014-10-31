@@ -12,10 +12,6 @@
 
 @property(nonatomic, assign) NSInteger childVCIndexToShow;
 
-
-- (instancetype)initWithEmitter:(id)emitter;
-+ (instancetype)modelWithEmitter:(id)emitter;
-
 - (void)swapButtonPressed;
 
 @end
