@@ -43,10 +43,12 @@ SPEC_BEGIN(MapViewModelSpec)
             [[vm.emitter should] beNonNil];
         });
 
-        it(@"should have coordinate of the user", ^{
-
+        it(@"should have invalid coordinates when it starts ", ^{
             [[theValue(vm.coordinate.latitude) should] equal:theValue(0)];
             [[theValue(vm.coordinate.longitude) should] equal:theValue(0)];
+        });
+
+        it(@"should have coordinates of the user", ^{
             __block CLLocationCoordinate2D futureCoordinate = vm.coordinate;
             [vm.emitter subscribe:self on:^{
                 futureCoordinate = vm.coordinate;
@@ -57,7 +59,6 @@ SPEC_BEGIN(MapViewModelSpec)
         });
 
         it(@"should have coordinate span around the user", ^{
-            MapViewModel *vm = [[MapViewModel alloc] initWithLocationManager:nil];
             [[theValue(vm.spanLat) should] equal:theValue(0.01)];
             [[theValue(vm.spanLong) should] equal:theValue(0.01)];
         });
