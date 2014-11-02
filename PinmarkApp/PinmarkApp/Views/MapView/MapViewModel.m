@@ -27,6 +27,8 @@
 - (id)initWithLocationManager:(LocationManager *)manager {
     if(self = [self init]) {
         self.locationManager = manager;
+        self.spanLat = 0.01;
+        self.spanLong = 0.01;
 
         WSELFY
         [self.locationManager.emitter subscribe:self on:^{

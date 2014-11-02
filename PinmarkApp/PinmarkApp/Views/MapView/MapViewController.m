@@ -68,7 +68,9 @@
 - (void)render {
     if (self.vm.coordinate.latitude != 0 &&
             self.vm.coordinate.longitude != 0) {
-        self.mapView.centerCoordinate = self.vm.coordinate;
+        MKCoordinateSpan span = MKCoordinateSpanMake(self.vm.spanLat, self.vm.spanLong);
+        MKCoordinateRegion region = {self.vm.coordinate, span};
+        self.mapView.region = region;
     }
 }
 

@@ -12,6 +12,8 @@
 @interface MapViewModel : NSObject
 @property(nonatomic, strong) id emitter;
 @property(nonatomic, assign) CLLocationCoordinate2D coordinate;
+@property(nonatomic, assign) double spanLat;
+@property(nonatomic, assign) double spanLong;
 
 - (id)initWithLocationManager:(LocationManager *)manager;
 

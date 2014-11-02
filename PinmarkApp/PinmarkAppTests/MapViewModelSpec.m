@@ -48,8 +48,10 @@ SPEC_BEGIN(MapViewModelSpec)
             [[expectFutureValue(theValue(futureCoordinate.longitude)) shouldEventually] equal:theValue(10)];
         });
 
-        it(@"should have the region around the user", ^{
-
+        it(@"should have coordinate span around the user", ^{
+            MapViewModel *vm = [[MapViewModel alloc] initWithLocationManager:nil];
+            [[theValue(vm.spanLat) should] equal:theValue(0.01)];
+            [[theValue(vm.spanLong) should] equal:theValue(0.01)];
         });
 
     });
