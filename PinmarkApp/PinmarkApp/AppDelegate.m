@@ -13,7 +13,7 @@
 #import "PinListViewController.h"
 #import "ContainerViewModel.h"
 #import "MapViewModel.h"
-#import "LocationManager.h"
+#import "LocationDatastore.h"
 
 
 @interface AppDelegate ()
@@ -45,7 +45,7 @@
 - (NSArray *)_configuredChildViewControllers {
 
     return @[
-            [[MapViewController alloc] initWithVm:[[MapViewModel alloc] initWithLocationManager:[LocationManager new]]],
+            [[MapViewController alloc] initWithVm:[[MapViewModel alloc] initWithLocationManager:[LocationDatastore new]]],
             [PinListViewController new]
     ];
 }

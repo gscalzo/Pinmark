@@ -6,9 +6,9 @@
 #import "Kiwi.h"
 #import "MapViewModel.h"
 #import "Emitter.h"
-#import "LocationManager.h"
+#import "LocationDatastore.h"
 
-@interface TestLocationManager : LocationManager
+@interface TestLocationManager : LocationDatastore
 @end
 
 @implementation TestLocationManager
@@ -33,7 +33,7 @@ SPEC_BEGIN(MapViewModelSpec)
         });
 
         it(@"should have coordinate of the user", ^{
-            LocationManager *locationManager = [TestLocationManager new];
+            LocationDatastore *locationManager = [TestLocationManager new];
 
             MapViewModel *vm = [[MapViewModel alloc] initWithLocationManager:locationManager];
 

@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-@class LocationManager;
+@class LocationDatastore;
 
 
 @interface MapViewModel : NSObject
@@ -15,6 +15,6 @@
 @property(nonatomic, assign) double spanLat;
 @property(nonatomic, assign) double spanLong;
 
-- (id)initWithLocationManager:(LocationManager *)manager;
+- (id)initWithLocationManager:(LocationDatastore *)manager;
 
 @end

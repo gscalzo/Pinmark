@@ -5,12 +5,12 @@
 
 #import "MapViewModel.h"
 #import "Emitter.h"
-#import "LocationManager.h"
+#import "LocationDatastore.h"
 #import "Common.h"
 
 
 @interface MapViewModel ()
-@property(nonatomic, strong) LocationManager *locationManager;
+@property(nonatomic, strong) LocationDatastore *locationManager;
 @end
 
 @implementation MapViewModel
@@ -24,7 +24,7 @@
 }
 
 
-- (id)initWithLocationManager:(LocationManager *)manager {
+- (id)initWithLocationManager:(LocationDatastore *)manager {
     if(self = [self init]) {
         self.locationManager = manager;
         self.spanLat = 0.01;
