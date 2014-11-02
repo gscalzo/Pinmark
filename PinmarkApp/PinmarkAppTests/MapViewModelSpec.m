@@ -27,15 +27,23 @@
 
 SPEC_BEGIN(MapViewModelSpec)
     describe(@"A MapViewModel", ^{
+        __block MapViewModel *vm;
+
+        beforeEach(^{
+            vm = [[MapViewModel alloc] initWithLocationManager:[TestLocationManager new]];
+        });
+
+
+        afterEach(^{
+            [vm.emitter unsubscribe:self];
+        });
+
         it(@"should have an Emitter", ^{
             MapViewModel *vm = [MapViewModel new];
             [[vm.emitter should] beNonNil];
         });
 
         it(@"should have coordinate of the user", ^{
-            LocationDatastore *locationManager = [TestLocationManager new];
-
-            MapViewModel *vm = [[MapViewModel alloc] initWithLocationManager:locationManager];
 
             [[theValue(vm.coordinate.latitude) should] equal:theValue(0)];
             [[theValue(vm.coordinate.longitude) should] equal:theValue(0)];
@@ -52,6 +60,10 @@ SPEC_BEGIN(MapViewModelSpec)
             MapViewModel *vm = [[MapViewModel alloc] initWithLocationManager:nil];
             [[theValue(vm.spanLat) should] equal:theValue(0.01)];
             [[theValue(vm.spanLong) should] equal:theValue(0.01)];
+        });
+
+        context(@"actions", ^{
+
         });
 
     });
