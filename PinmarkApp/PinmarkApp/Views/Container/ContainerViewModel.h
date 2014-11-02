@@ -11,6 +11,7 @@
 
 
 @property(nonatomic, assign) NSInteger childVCIndexToShow;
+@property(nonatomic, copy) NSString *buttonImage;
 
 - (void)swapButtonPressed;
 

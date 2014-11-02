@@ -12,15 +12,15 @@
 #import "MapViewController.h"
 #import "PinListViewController.h"
 #import "ContainerViewModel.h"
+#import "MapViewModel.h"
+#import "LocationManager.h"
 
 
 @interface AppDelegate ()
-@property (nonatomic, strong) UIWindow *privateWindow;
+@property(nonatomic, strong) UIWindow *privateWindow;
 @end
 
 @implementation AppDelegate
-
-
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -45,7 +45,7 @@
 - (NSArray *)_configuredChildViewControllers {
 
     return @[
-            [MapViewController new],
+            [[MapViewController alloc] initWithVm:[[MapViewModel alloc] initWithLocationManager:[LocationManager new]]],
             [PinListViewController new]
     ];
 }

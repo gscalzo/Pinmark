@@ -1,5 +1,5 @@
 //
-//  DGObservableSpec.m
+//  DGEmitterSpec.m
 //  Delhaize
 //
 //  Created by Giordano Scalzo on 01/07/2014.
@@ -9,7 +9,7 @@
 #import "ObserverInTest.h"
 #import "Emitter.h"
 
-SPEC_BEGIN(DGObservableSpec)
+SPEC_BEGIN(DGEmitterSpec)
     describe(@"Emitter", ^{
 
         __block Emitter *emitter = nil;

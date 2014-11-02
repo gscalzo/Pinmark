@@ -50,6 +50,21 @@ SPEC_BEGIN(ContainerViewModelSpec)
             [[expectFutureValue(theValue(futureChildIndex)) shouldEventually] equal:theValue(0)];
         });
 
+        it(@"should alternate the image to show on the button", ^{
+            ContainerViewModel *vm = [ContainerViewModel new];
+
+            __block NSString *futureButtonImage = vm.buttonImage;
+            [vm.emitter subscribe:self on:^{
+                futureButtonImage = vm.buttonImage;
+            }];
+
+
+            [[expectFutureValue(futureButtonImage) shouldEventually] equal:@"icon.pinlist"];
+            [vm swapButtonPressed];
+            [[expectFutureValue(futureButtonImage) shouldEventually] equal:@"icon.map"];
+            [vm swapButtonPressed];
+            [[expectFutureValue(futureButtonImage) shouldEventually] equal:@"icon.pinlist"];
+        });
 
     });
 SPEC_END

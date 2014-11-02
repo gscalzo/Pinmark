@@ -8,21 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4EE97044F0A47FB114D379C0 /* Emitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97634192462FFB86026C8 /* Emitter.m */; };
-		4EE97098187A0EEA9232CE24 /* PinmarkAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9744E43793C05B5886D86 /* PinmarkAppTests.m */; };
 		4EE972D287BAD9BDB2886970 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE972FE402AB212E144B45E /* MapViewController.m */; };
+		4EE972EF20D1CF82B678A2E2 /* MapViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9712997388CF8327A49A5 /* MapViewModelSpec.m */; };
 		4EE972F7A7C7A2FE6AF20265 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE97175C3CBEE7C53D94273 /* LaunchScreen.xib */; };
 		4EE97378F3E0298EB72ED0D1 /* PinListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE970E1F33A51093125830D /* PinListViewController.m */; };
 		4EE975A3800EF748E0FF5C63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EE9794D36EB9246BCE5CEAE /* Images.xcassets */; };
 		4EE97603E49319790F90BA85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97E1ED56CBF454B06DDAF /* AppDelegate.m */; };
 		4EE97605A52964B0D797E5BD /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97A4499404030EF92782A /* ContainerViewController.m */; };
+		4EE977BAFBBA3410E706C92D /* LocationDatastore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97D52885288E9DFE0CF57 /* LocationDatastore.m */; };
 		4EE977F44654289CAAF23AA4 /* ObserverInTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9780051C3D5C3EA6196D9 /* ObserverInTest.m */; };
 		4EE977FBA06F49F3D033466F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9764E52722518EFCC0152 /* main.m */; };
 		4EE97ADB097EDC9647A0882E /* ContainerViewModelSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97804A7158230E5641536 /* ContainerViewModelSpecs.m */; };
-		4EE97CC21F3B3259A9AC38EC /* DGObservableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97284EE607D307E8C91B0 /* DGObservableSpec.m */; };
+		4EE97CC21F3B3259A9AC38EC /* DGEmitterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97284EE607D307E8C91B0 /* DGEmitterSpec.m */; };
 		4EE97F3EBE7036A3CDDF9C24 /* KiwiSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE97657A56593F2F846119F /* KiwiSpecs.m */; };
 		575E63154615DB987F4492BA /* libPods-PinmarkApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94DD0F22DEE3F0C4A3F7A9 /* libPods-PinmarkApp.a */; };
 		778AF67E9025C8F645899B00 /* libPods-PinmarkAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8229C8ECEE98E2649F143D25 /* libPods-PinmarkAppTests.a */; };
+		EE9D20291A05967E00A105FA /* LocationDatastoreSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE974009E76C5F4F8823922 /* LocationDatastoreSpec.m */; };
+		EE9D202C1A05975D00A105FA /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9D202B1A05975D00A105FA /* LocationManager.m */; };
+		EE9D202D1A05A88400A105FA /* MapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9721CD9DC2E9898C790E0 /* MapViewModel.m */; };
 		EEA129841A04427400FA5D39 /* ContainerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9777B66C02E0A6151D0E9 /* ContainerViewModel.m */; };
+		EEA129861A044DAF00FA5D39 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA129851A044DAF00FA5D39 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +47,12 @@
 		4EE9701F9CB9C9AE46F37E41 /* ContainerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewModel.h; sourceTree = "<group>"; };
 		4EE9703EF68DC46EE8A62BCE /* PinmarkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinmarkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE970E1F33A51093125830D /* PinListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinListViewController.m; sourceTree = "<group>"; };
-		4EE97284EE607D307E8C91B0 /* DGObservableSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGObservableSpec.m; sourceTree = "<group>"; };
+		4EE9712997388CF8327A49A5 /* MapViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewModelSpec.m; sourceTree = "<group>"; };
+		4EE9721CD9DC2E9898C790E0 /* MapViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewModel.m; sourceTree = "<group>"; };
+		4EE97284EE607D307E8C91B0 /* DGEmitterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGEmitterSpec.m; sourceTree = "<group>"; };
 		4EE972BFA61BD1FF4B460AA1 /* ObserverInTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObserverInTest.h; sourceTree = "<group>"; };
 		4EE972FE402AB212E144B45E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		4EE9744E43793C05B5886D86 /* PinmarkAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinmarkAppTests.m; sourceTree = "<group>"; };
+		4EE974009E76C5F4F8823922 /* LocationDatastoreSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDatastoreSpec.m; sourceTree = "<group>"; };
 		4EE97634192462FFB86026C8 /* Emitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emitter.m; sourceTree = "<group>"; };
 		4EE9764E52722518EFCC0152 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EE97657A56593F2F846119F /* KiwiSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiwiSpecs.m; sourceTree = "<group>"; };
@@ -58,16 +65,22 @@
 		4EE97A2547FE639241F1B0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		4EE97A4499404030EF92782A /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 		4EE97AE533EC572F1F1FAB65 /* PinListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinListViewController.h; sourceTree = "<group>"; };
+		4EE97AE541446A49F5233089 /* MapViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewModel.h; sourceTree = "<group>"; };
 		4EE97B402CCEC5FE886F13FC /* PinmarkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinmarkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE97BA7062982BD9C58DD9B /* Emitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emitter.h; sourceTree = "<group>"; };
 		4EE97C70950B9F0DE16E9AE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4EE97CDAFB44C6241E6A354F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		4EE97D4F53C3F21994D2C4C3 /* LocationDatastore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDatastore.h; sourceTree = "<group>"; };
+		4EE97D52885288E9DFE0CF57 /* LocationDatastore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDatastore.m; sourceTree = "<group>"; };
 		4EE97DC588BD8821EB99A227 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		4EE97E1ED56CBF454B06DDAF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4EE97F117A11F094B3242A5D /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
 		8229C8ECEE98E2649F143D25 /* libPods-PinmarkAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PinmarkAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C96C72398AF2C349088D66 /* Pods-PinmarkAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinmarkAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinmarkAppTests/Pods-PinmarkAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DE071ADC1740A5DEB2A57494 /* Pods-PinmarkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinmarkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinmarkApp/Pods-PinmarkApp.release.xcconfig"; sourceTree = "<group>"; };
+		EE9D202A1A05975D00A105FA /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		EE9D202B1A05975D00A105FA /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		EEA129851A044DAF00FA5D39 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA129861A044DAF00FA5D39 /* MapKit.framework in Frameworks */,
 				575E63154615DB987F4492BA /* libPods-PinmarkApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EE970F5273632E513898CE3 /* Datastore */ = {
+			isa = PBXGroup;
+			children = (
+				4EE97D52885288E9DFE0CF57 /* LocationDatastore.m */,
+				4EE97D4F53C3F21994D2C4C3 /* LocationDatastore.h */,
+			);
+			path = Datastore;
+			sourceTree = "<group>";
+		};
 		4EE97122FEFC91B8BEE724AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +138,8 @@
 				4EE97634192462FFB86026C8 /* Emitter.m */,
 				4EE97BA7062982BD9C58DD9B /* Emitter.h */,
 				4EE9771B6DE6C7468F48B2FA /* Common.h */,
+				EE9D202A1A05975D00A105FA /* LocationManager.h */,
+				EE9D202B1A05975D00A105FA /* LocationManager.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -124,6 +149,8 @@
 			children = (
 				4EE97DC588BD8821EB99A227 /* MapViewController.h */,
 				4EE972FE402AB212E144B45E /* MapViewController.m */,
+				4EE9721CD9DC2E9898C790E0 /* MapViewModel.m */,
+				4EE97AE541446A49F5233089 /* MapViewModel.h */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -141,10 +168,11 @@
 			isa = PBXGroup;
 			children = (
 				4EE97122FEFC91B8BEE724AB /* Supporting Files */,
-				4EE9744E43793C05B5886D86 /* PinmarkAppTests.m */,
 				4EE97657A56593F2F846119F /* KiwiSpecs.m */,
 				4EE9788A6B0A9E2D1A25BA58 /* Emitter */,
 				4EE97804A7158230E5641536 /* ContainerViewModelSpecs.m */,
+				4EE9712997388CF8327A49A5 /* MapViewModelSpec.m */,
+				4EE974009E76C5F4F8823922 /* LocationDatastoreSpec.m */,
 			);
 			path = PinmarkAppTests;
 			sourceTree = "<group>";
@@ -168,6 +196,7 @@
 				4EE97E1ED56CBF454B06DDAF /* AppDelegate.m */,
 				4EE97F0EBDBCAE03DB78AE1C /* Views */,
 				4EE97320FE8A316673427732 /* Lib */,
+				4EE970F5273632E513898CE3 /* Datastore */,
 			);
 			path = PinmarkApp;
 			sourceTree = "<group>";
@@ -186,7 +215,7 @@
 		4EE9788A6B0A9E2D1A25BA58 /* Emitter */ = {
 			isa = PBXGroup;
 			children = (
-				4EE97284EE607D307E8C91B0 /* DGObservableSpec.m */,
+				4EE97284EE607D307E8C91B0 /* DGEmitterSpec.m */,
 				4EE97403CC47DE90B42D9AB8 /* Stubs */,
 			);
 			path = Emitter;
@@ -223,6 +252,7 @@
 		9C6CD990726EA2B689ED17C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEA129851A044DAF00FA5D39 /* MapKit.framework */,
 				8229C8ECEE98E2649F143D25 /* libPods-PinmarkAppTests.a */,
 				1E94DD0F22DEE3F0C4A3F7A9 /* libPods-PinmarkApp.a */,
 			);
@@ -398,10 +428,13 @@
 				4EE977FBA06F49F3D033466F /* main.m in Sources */,
 				4EE97603E49319790F90BA85 /* AppDelegate.m in Sources */,
 				4EE97605A52964B0D797E5BD /* ContainerViewController.m in Sources */,
+				EE9D202D1A05A88400A105FA /* MapViewModel.m in Sources */,
+				EE9D202C1A05975D00A105FA /* LocationManager.m in Sources */,
 				4EE972D287BAD9BDB2886970 /* MapViewController.m in Sources */,
 				EEA129841A04427400FA5D39 /* ContainerViewModel.m in Sources */,
 				4EE97378F3E0298EB72ED0D1 /* PinListViewController.m in Sources */,
 				4EE97044F0A47FB114D379C0 /* Emitter.m in Sources */,
+				4EE977BAFBBA3410E706C92D /* LocationDatastore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,11 +442,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE97098187A0EEA9232CE24 /* PinmarkAppTests.m in Sources */,
 				4EE97F3EBE7036A3CDDF9C24 /* KiwiSpecs.m in Sources */,
-				4EE97CC21F3B3259A9AC38EC /* DGObservableSpec.m in Sources */,
+				4EE97CC21F3B3259A9AC38EC /* DGEmitterSpec.m in Sources */,
 				4EE977F44654289CAAF23AA4 /* ObserverInTest.m in Sources */,
+				EE9D20291A05967E00A105FA /* LocationDatastoreSpec.m in Sources */,
 				4EE97ADB097EDC9647A0882E /* ContainerViewModelSpecs.m in Sources */,
+				4EE972EF20D1CF82B678A2E2 /* MapViewModelSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +533,7 @@
 				INFOPLIST_FILE = PinmarkApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
@@ -527,6 +562,7 @@
 				INFOPLIST_FILE = PinmarkApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};

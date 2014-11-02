@@ -7,8 +7,10 @@
 //
 
 @import UIKit;
-@import Foundation;
+@import Foundation;@class MapViewModel;
 
 @interface MapViewController : UIViewController
+
+- (instancetype)initWithVm:(MapViewModel *)vm;
 
 @end
