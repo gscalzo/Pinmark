@@ -65,6 +65,47 @@ SPEC_BEGIN(MapViewModelSpec)
 
         context(@"actions", ^{
 
+            context(@"starting", ^{
+                it(@"should start with pinimage for the button", ^{
+
+                });
+
+                it(@"should start with viewfinder hidden", ^{
+
+                });
+            });
+
+            context(@"when the pin button is pressed", ^{
+                it(@"should have a viewfinder button", ^{
+
+                });
+
+                it(@"should show the viewfinder", ^{
+
+                });
+            });
+
+            context(@"when the viewfinder button is pressed", ^{
+                it(@"should hide the viewfinder ", ^{
+
+                });
+
+                it(@"should have a pin coordinte", ^{
+
+                });
+
+                it(@"should ask for a description", ^{
+
+                });
+            });
+
+            context(@"when set the name", ^{
+                it(@"should have a pinmark ", ^{
+
+                });
+            });
+
+
         });
 
     });
