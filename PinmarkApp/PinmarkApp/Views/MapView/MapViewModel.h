@@ -15,6 +15,10 @@
 @property(nonatomic, assign) double spanLat;
 @property(nonatomic, assign) double spanLong;
 
+@property(nonatomic, strong) NSString *pinButtonImage;
+@property(nonatomic, assign) BOOL viewfinderHidden;
+
 - (id)initWithLocationManager:(LocationDatastore *)manager;
 
+- (void)pressActionButtonWithCoordinate:(CLLocationCoordinate2D)coordinate;
 @end

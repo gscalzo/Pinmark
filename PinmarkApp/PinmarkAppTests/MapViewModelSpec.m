@@ -67,27 +67,46 @@ SPEC_BEGIN(MapViewModelSpec)
 
             context(@"starting", ^{
                 it(@"should start with pinimage for the button", ^{
-
+                    [[vm.pinButtonImage should] equal:@"map.icon.pinimage"];
                 });
 
                 it(@"should start with viewfinder hidden", ^{
-
+                    [[theValue(vm.viewfinderHidden) should] beTrue];
                 });
             });
 
             context(@"when the pin button is pressed", ^{
                 it(@"should have a viewfinder button", ^{
+                    __block NSString *futureButtonImage = vm.pinButtonImage;
+                    [vm.emitter subscribe:self on:^{
+                        futureButtonImage = vm.pinButtonImage;
+                    }];
 
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(0, 0)];
+                    [[expectFutureValue(futureButtonImage) shouldEventually] equal:@"map.icon.viewfinderimage"];
                 });
 
                 it(@"should show the viewfinder", ^{
+                    __block BOOL futureviewfinderHidden = vm.viewfinderHidden;
+                    [vm.emitter subscribe:self on:^{
+                        futureviewfinderHidden = vm.viewfinderHidden;
+                    }];
 
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(0, 0)];
+                    [[expectFutureValue(theValue(futureviewfinderHidden)) shouldEventually] beFalse];
                 });
             });
 
             context(@"when the viewfinder button is pressed", ^{
                 it(@"should hide the viewfinder ", ^{
+                    __block BOOL futureviewfinderHidden = vm.viewfinderHidden;
+                    [vm.emitter subscribe:self on:^{
+                        futureviewfinderHidden = vm.viewfinderHidden;
+                    }];
 
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(0, 0)];
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(10, 20)];
+                    [[expectFutureValue(theValue(futureviewfinderHidden)) shouldEventually] beTrue];
                 });
 
                 it(@"should have a pin coordinte", ^{

@@ -11,6 +11,7 @@
 
 @interface MapViewModel ()
 @property(nonatomic, strong) LocationDatastore *locationManager;
+@property(nonatomic) BOOL inSelectingPinmarkState;
 @end
 
 @implementation MapViewModel
@@ -29,6 +30,8 @@
         self.locationManager = manager;
         self.spanLat = 0.01;
         self.spanLong = 0.01;
+        self.pinButtonImage = @"map.icon.pinimage";
+        self.viewfinderHidden = YES;
 
         WSELFY
         [self.locationManager.emitter subscribe:self on:^{
@@ -43,5 +46,20 @@
 - (void)dealloc{
     [self.emitter unsubscribe:self];
 }
+
+- (void)pressActionButtonWithCoordinate:(CLLocationCoordinate2D)coordinate {
+    if (self.inSelectingPinmarkState) {
+        self.pinButtonImage = @"map.icon.pinimage";
+        self.viewfinderHidden = YES;
+        self.inSelectingPinmarkState = NO;
+    } else {
+        self.pinButtonImage = @"map.icon.viewfinderimage";
+        self.viewfinderHidden = NO;
+        self.inSelectingPinmarkState = YES;
+    }
+
+    [self.emitter emit];
+}
+
 
 @end
