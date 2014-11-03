@@ -12,11 +12,13 @@
 @interface MapViewModel : NSObject
 @property(nonatomic, strong) id emitter;
 @property(nonatomic, assign) CLLocationCoordinate2D coordinate;
+@property(nonatomic, assign) CLLocationCoordinate2D pinmarkCoordinate;
 @property(nonatomic, assign) double spanLat;
 @property(nonatomic, assign) double spanLong;
 
 @property(nonatomic, strong) NSString *pinButtonImage;
 @property(nonatomic, assign) BOOL viewfinderHidden;
+@property(nonatomic, assign) BOOL askForAName;
 
 - (id)initWithLocationManager:(LocationDatastore *)manager;
 

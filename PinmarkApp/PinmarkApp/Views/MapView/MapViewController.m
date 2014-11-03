@@ -16,6 +16,8 @@
 
 @interface MapViewController ()
 @property(nonatomic, strong) MKMapView *mapView;
+@property(nonatomic, strong) UIImageView *viewfinderImage;
+@property(nonatomic, strong) UIButton *actionButton;
 @property(nonatomic, strong) MapViewModel *vm;
 
 @end
@@ -38,6 +40,14 @@
 
     self.mapView = [MKMapView new];
     [self.view addSubview:self.mapView];
+    self.viewfinderImage = [UIImageView new];
+    [self.view addSubview:self.viewfinderImage];
+    self.viewfinderImage.image = [UIImage imageNamed:@"map.image.viewfinder"];
+    self.actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.actionButton];
+    [self.actionButton addTarget:self action:@selector(_buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+
+
     [self layoutView];
 
     WSELFY
@@ -61,6 +71,17 @@
         make.top.equalTo(self.view.mas_top);
         make.bottom.equalTo(self.view.mas_bottom);
     }];
+
+    [self.viewfinderImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.mapView.mas_centerX);
+        make.centerY.equalTo(self.mapView.mas_centerY);
+    }];
+
+    [self.actionButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.mapView.mas_centerY);
+        make.trailing.equalTo(@-10);
+    }];
+
 }
 
 #pragma mark - Render
@@ -72,6 +93,17 @@
         MKCoordinateRegion region = {self.vm.coordinate, span};
         self.mapView.region = region;
     }
+
+    self.viewfinderImage.hidden = self.vm.viewfinderHidden;
+    [self.actionButton setImage:[UIImage imageNamed:self.vm.pinButtonImage] forState:UIControlStateNormal];
+
+}
+
+
+#pragma mark - Actions
+
+- (void)_buttonTapped:(UIButton *)button {
+    [self.vm pressActionButtonWithCoordinate:self.mapView.centerCoordinate];
 }
 
 @end

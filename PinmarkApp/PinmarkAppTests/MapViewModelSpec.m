@@ -110,22 +110,46 @@ SPEC_BEGIN(MapViewModelSpec)
                 });
 
                 it(@"should have a pin coordinte", ^{
+                    __block CLLocationCoordinate2D futureviewPinmarkCoordinate = vm.pinmarkCoordinate;
+                    [vm.emitter subscribe:self on:^{
+                        futureviewPinmarkCoordinate = vm.pinmarkCoordinate;
+                    }];
 
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(0, 0)];
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(10, 20)];
+                    [[expectFutureValue(theValue(futureviewPinmarkCoordinate.latitude)) shouldEventually] equal:theValue(10)];
+                    [[expectFutureValue(theValue(futureviewPinmarkCoordinate.longitude)) shouldEventually] equal:theValue(20)];
                 });
 
-                it(@"should ask for a description", ^{
+                it(@"should ask for a name", ^{
+                    __block BOOL futureAskForAName = vm.askForAName;
+                    [vm.emitter subscribe:self on:^{
+                        futureAskForAName = vm.askForAName;
+                    }];
+                    [[theValue(futureAskForAName) should] beFalse];
 
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(0, 0)];
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(10, 20)];
+                    [[expectFutureValue(theValue(futureAskForAName)) shouldEventually] beTrue];
                 });
             });
 
             context(@"when set the name", ^{
-                it(@"should have a pinmark ", ^{
+                it(@"should have a new pinmark ", ^{
 
                 });
+                it(@"should not ask for a name ", ^{
+                    __block BOOL futureAskForAName = vm.askForAName;
+                    [vm.emitter subscribe:self on:^{
+                        futureAskForAName = vm.askForAName;
+                    }];
+                    [[theValue(futureAskForAName) should] beFalse];
+
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(0, 0)];
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(10, 20)];
+                    [[expectFutureValue(theValue(futureAskForAName)) shouldEventually] beTrue];
+                });
             });
-
-
         });
-
     });
 SPEC_END

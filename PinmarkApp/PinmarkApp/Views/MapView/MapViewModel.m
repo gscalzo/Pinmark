@@ -52,10 +52,13 @@
         self.pinButtonImage = @"map.icon.pinimage";
         self.viewfinderHidden = YES;
         self.inSelectingPinmarkState = NO;
+        self.pinmarkCoordinate = coordinate;
+        self.askForAName = YES;
     } else {
         self.pinButtonImage = @"map.icon.viewfinderimage";
         self.viewfinderHidden = NO;
         self.inSelectingPinmarkState = YES;
+        self.askForAName = NO;
     }
 
     [self.emitter emit];
