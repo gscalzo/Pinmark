@@ -54,6 +54,7 @@
         self.inSelectingPinmarkState = NO;
         self.pinmarkCoordinate = coordinate;
         self.askForAName = YES;
+        self.coordinate = CLLocationCoordinate2DMake(0, 0);
     } else {
         self.pinButtonImage = @"map.icon.viewfinderimage";
         self.viewfinderHidden = NO;
@@ -64,5 +65,11 @@
     [self.emitter emit];
 }
 
+
+- (void)addPinmarkName:(NSString *)string coordinate:(CLLocationCoordinate2D)coordinate {
+    self.freshlyAddedPins = @[@1];
+    self.askForAName = NO;
+    [self.emitter emit];
+}
 
 @end

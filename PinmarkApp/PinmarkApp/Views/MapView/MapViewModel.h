@@ -20,7 +20,11 @@
 @property(nonatomic, assign) BOOL viewfinderHidden;
 @property(nonatomic, assign) BOOL askForAName;
 
+@property(nonatomic, strong) NSArray *freshlyAddedPins;
+
 - (id)initWithLocationManager:(LocationDatastore *)manager;
 
 - (void)pressActionButtonWithCoordinate:(CLLocationCoordinate2D)coordinate;
+
+- (void)addPinmarkName:(NSString *)string coordinate:(CLLocationCoordinate2D)coordinate;
 @end

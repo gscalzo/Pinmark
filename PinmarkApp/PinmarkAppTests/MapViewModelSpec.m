@@ -14,7 +14,7 @@
 @implementation TestLocationManager
 
 - (void)start {
-    double delayInSeconds = 0.1;
+    double delayInSeconds = 0.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t) (delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
         self.coordinate = CLLocationCoordinate2DMake(20, 10);
@@ -121,6 +121,18 @@ SPEC_BEGIN(MapViewModelSpec)
                     [[expectFutureValue(theValue(futureviewPinmarkCoordinate.longitude)) shouldEventually] equal:theValue(20)];
                 });
 
+                it(@"should have a empty coordinte", ^{
+                    __block CLLocationCoordinate2D futureviewCoordinate = vm.coordinate;
+                    [vm.emitter subscribe:self on:^{
+                        futureviewCoordinate = vm.coordinate;
+                    }];
+
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(0, 0)];
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(10, 20)];
+                    [[expectFutureValue(theValue(futureviewCoordinate.latitude)) shouldEventually] equal:theValue(0)];
+                    [[expectFutureValue(theValue(futureviewCoordinate.longitude)) shouldEventually] equal:theValue(0)];
+                });
+
                 it(@"should ask for a name", ^{
                     __block BOOL futureAskForAName = vm.askForAName;
                     [vm.emitter subscribe:self on:^{
@@ -136,7 +148,16 @@ SPEC_BEGIN(MapViewModelSpec)
 
             context(@"when set the name", ^{
                 it(@"should have a new pinmark ", ^{
+                    __block NSUInteger futureNumberOfNewPins = vm.freshlyAddedPins.count;
+                    [vm.emitter subscribe:self on:^{
+                        futureNumberOfNewPins = vm.freshlyAddedPins.count;
+                    }];
+                    [[theValue(futureNumberOfNewPins) should] equal:theValue(0)];
 
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(0, 0)];
+                    [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(10, 20)];
+                    [vm addPinmarkName:@"pinmark name" coordinate:CLLocationCoordinate2DMake(10, 20)];
+                    [[expectFutureValue(theValue(futureNumberOfNewPins)) shouldEventually] equal:theValue(1)];
                 });
                 it(@"should not ask for a name ", ^{
                     __block BOOL futureAskForAName = vm.askForAName;
@@ -147,7 +168,8 @@ SPEC_BEGIN(MapViewModelSpec)
 
                     [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(0, 0)];
                     [vm pressActionButtonWithCoordinate:CLLocationCoordinate2DMake(10, 20)];
-                    [[expectFutureValue(theValue(futureAskForAName)) shouldEventually] beTrue];
+                    [vm addPinmarkName:@"pinmark name" coordinate:CLLocationCoordinate2DMake(10, 20)];
+                    [[expectFutureValue(theValue(futureAskForAName)) shouldEventually] beFalse];
                 });
             });
         });

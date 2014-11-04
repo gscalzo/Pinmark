@@ -97,6 +97,10 @@
     self.viewfinderImage.hidden = self.vm.viewfinderHidden;
     [self.actionButton setImage:[UIImage imageNamed:self.vm.pinButtonImage] forState:UIControlStateNormal];
 
+    if (self.vm.askForAName) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"insername" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView show];
+    }
 }
 
 

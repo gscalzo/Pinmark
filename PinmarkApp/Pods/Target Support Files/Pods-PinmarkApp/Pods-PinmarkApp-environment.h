@@ -18,3 +18,9 @@
 #define COCOAPODS_VERSION_MINOR_ObjectiveSugar 1
 #define COCOAPODS_VERSION_PATCH_ObjectiveSugar 0
 
+// STAlertView
+#define COCOAPODS_POD_AVAILABLE_STAlertView
+#define COCOAPODS_VERSION_MAJOR_STAlertView 1
+#define COCOAPODS_VERSION_MINOR_STAlertView 0
+#define COCOAPODS_VERSION_PATCH_STAlertView 0
+
